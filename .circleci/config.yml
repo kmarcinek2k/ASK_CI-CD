@@ -10,8 +10,8 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
-        name: Build docker containers
-        command: docker-compose up -d
+          name: Build docker containers
+          command: docker-compose up -d
 
   acceptance_test_1:
     executor:
