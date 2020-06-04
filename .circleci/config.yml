@@ -13,14 +13,14 @@ jobs:
           command: npm install
           working_directory: ./server
       - run:
-	  command: npm test
-	  working_directory: ./server
+          command: npm test
+          working_directory: ./server
       - run:
           command: npm install
           working_directory: ./client
       - run:
-	  command: npm test
-	  working_directory: ./client
+          command: npm test
+          working_directory: ./client
 workflows:
     build-and-test:
       jobs:
