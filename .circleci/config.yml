@@ -6,12 +6,12 @@ jobs:
   build:
     executor:
       name: node/default
-    steps:
-      - checkout
-      - setup_remote_docker
-      - run:
-        name: Build containers
-        command: docker-compose up -d
+      steps:
+        - checkout
+        - setup_remote_docker
+        - run:
+          name: Build containers
+          command: docker-compose up -d
 
   acceptance_test_1:
     executor:
