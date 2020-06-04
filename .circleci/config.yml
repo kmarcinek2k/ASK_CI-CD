@@ -7,9 +7,14 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - node/install-packages
-      - run: npm install
-      - run: npm test
+      - node/install-packages:
+          app-dir: ./server
+      - run:
+          command: npm install
+          working_directory: ./server
+      - run:
+          command: npm install
+          working_directory: ./client
 workflows:
     build-and-test:
       jobs:
