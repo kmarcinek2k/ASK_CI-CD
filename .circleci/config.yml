@@ -3,11 +3,13 @@ orbs:
   node: circleci/node@2.1.0
 jobs:
   build-and-test:
+  build:
     executor:
       name: node/default
     steps:
       - checkout
-  acceptance_test_1:
+
+ acceptance_test_1:
     executor:
       name: node/default
     steps:
@@ -24,7 +26,7 @@ jobs:
     executor:
       name: node/default
     steps:
-      - checkout   
+      - checkout
       - run:
           command: npm install
           working_directory: ./client
